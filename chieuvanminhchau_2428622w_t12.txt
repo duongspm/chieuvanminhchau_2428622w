@@ -10,3 +10,23 @@ banner nhieu hinh
 
 footer lấy từ cấu hình chung
 
+news
+	tin tuc
+	feedback
+
+newsletter
+	go ten,dt, nd
+photo
+	logo
+	slide
+	banner
+
+product
+	dich vu 1 cap
+	thu vien anh
+
+static
+	slogan header
+	slogan
+	lienhe
+	gioi thieu

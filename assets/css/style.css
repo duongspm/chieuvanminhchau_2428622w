@@ -4,41 +4,28 @@
   font-family: Roboto-Regular;
   src: url("../fonts/Roboto-Regular.ttf");
 }
-@font-face {
-  font-family: Roboto-Bold;
-  src: url("../fonts/Roboto-Bold.ttf");
-}
 
 @font-face {
-  font-family: Roboto-Light;
-  src: url("../fonts/Roboto-Light.ttf");
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
 }
-@font-face {
-  font-family: Roboto-Italic;
-  src: url("../fonts/Roboto-Italic.ttf");
-}
-@font-face {
-  font-family: Roboto-Medium;
-  src: url("../fonts/Roboto-Medium.ttf");
-}
-
 @font-face {
   font-family: SVN;
-  src: url("../fonts/SVN-Avo.ttf");
+  src: url("../fonts/SVN-Tangerine.otf");
 }
-
+@font-face {
+  font-family: OldStandardTT;
+  src: url("../fonts/OldStandardTT-Regular.ttf");
+}
 
 
 /* Main */
 :root {
   --font-primary: "Roboto-Regular", sans-serif;
   --font-heading: "SVN", sans-serif;
-  --font-primary-Bold: "Roboto-Bold", sans-serif;
-  --font-primary-L: "Roboto-Light", sans-serif;
-  --font-primary-M: "Roboto-Medium", sans-serif;
-  --font-primary-Italic: "Roboto-Italic", sans-serif;
-
-  --font-footer: "Muli-Regular", sans-serif;
+  --font-Montserrat: "Montserrat", sans-serif;
+  --font-name: "SVN", sans-serif;
+  --font-title: "OldStandardTT", sans-serif;
 
   --color-primary: #70C5E8;
   --color-secondary: #F7B103;
@@ -240,7 +227,7 @@
 }
 body {
   font-size: 14px;
-  font-family: var(--font-primary);
+  font-family: var(--font-Montserrat);
   line-height: 1.5;
   overflow: auto;
 }
@@ -343,7 +330,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .wrap-content {
   margin: auto;
 }
-.marquee {
+/* .marquee {
   height: 25px;
   width: 100%;
 
@@ -364,7 +351,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .marquee span {
   float: left;
-  width: 100%;
+  width: 50%;
 }
 .marquee > div > span {
   font-size: 15px;
@@ -378,7 +365,7 @@ input[type="number"]::-webkit-inner-spin-button {
   100% {
     left: -100%;
   }
-}
+} */
 /* General */
 .title-main {
   margin-bottom: 1.5rem;
@@ -569,12 +556,21 @@ img:not([src]) {
   letter-spacing: 2px;
   color: #666666;
 }
+.header__slogan{
+  max-width: 40%;
+}
+.header__address{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .header__top {
-  background: #D4EDF8;
+  background: linear-gradient(90.05deg, #CB922A 0%, #FCDC5B 27.41%, #DCAC3B 67.76%, #FCDC5B 99.31%);
   padding: 10px;
-  color: black;
-  text-align: center;
+  color: white;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .header__info {
   animation-name: fadeInUp;

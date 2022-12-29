@@ -1,7 +1,6 @@
 <div class="header">
     <div class="header__top">
         <div class="header__slogan">
-            <!--  -->
             <div class="marquee">
                 <div>
                     <span>
@@ -10,8 +9,16 @@
                 </div>
             </div>
         </div>
+        <div class="header__address">
+            <div>
+                <img src="assets/images/images/icon-address.png" alt="<?=$setting['name'.$lang]?>">
+            </div>
+            <span>
+                <?=$optsetting['address']?>
+            </span>
+        </div>
     </div>
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <div class="header__bg--logo">
             <img src="assets/images/images/bg-logo01.png" alt="">
         </div>
@@ -55,6 +62,6 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 </div>

@@ -92,18 +92,11 @@ require_once LIBRARIES . "lang/$lang.php";
 /* Tối ưu link */
 $requick = array(
 	/* Sản phẩm */
-	array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
-	array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
+	array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "dich-vu", "type" => "dich-vu"),
+	array("tbl" => "product", "field" => "id", "source" => "product", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
 
-	/* Video */
-	array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
-	
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
-
-	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
 	
-	array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
-
 	/* Thư viện ảnh */
 	array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thu-vien-anh", "type" => "thu-vien-anh", "menu" => true),
 
@@ -164,19 +157,11 @@ switch ($com) {
 		break;
 
 	case 'dich-vu':
-		$source = "news";
-		$template = isset($_GET['id']) ? "news/news_detail" : "news/dichvu";
-		$seo->set('type', isset($_GET['id']) ? "article" : "object");
-		$type = $com;
-		$titleMain = "Dịch vụ";
-		break;
-
-	case 'san-pham':
 		$source = "product";
 		$template = isset($_GET['id']) ? "product/product_detail" : "product/product";
 		$seo->set('type', isset($_GET['id']) ? "article" : "object");
 		$type = $com;
-		$titleMain = sanpham;
+		$titleMain = "Dịch vụ";
 		break;
 
 	case 'tim-kiem':
@@ -186,7 +171,7 @@ switch ($com) {
 		$titleMain = timkiem;
 		break;
 
-	case 'tags-san-pham':
+	case 'tags-dich-vu':
 		$source = "tags";
 		$template = "product/product";
 		$type = $urlType;
