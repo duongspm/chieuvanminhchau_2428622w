@@ -1,0 +1,12 @@
+slogan header -> chay qua
+
+dich vu -> san pham 1 cap
+
+album
+
+banner nhieu hinh
+
+Đặt lịch ngay hover đổi chữ màu đỏ
+
+footer lấy từ cấu hình chung
+
