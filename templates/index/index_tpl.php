@@ -1,180 +1,125 @@
-<div class="doitac">
-    <div class="doitacc">
-        <div class="owl-page owl-carousel owl-theme" data-xsm-items="4:10" data-sm-items="5:10" data-md-items="6:10"
-            data-lg-items="7:10" data-xlg-items="9:10" data-rewind="1" data-autoplay="0" data-loop="0" data-lazyload="0"
-            data-mousedrag="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0"
-            data-nav="0"
-            data-navtext="<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-left' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='5' y1='12' x2='9' y2='16' /><line x1='5' y1='12' x2='9' y2='8' /></svg>|<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-right' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='15' y1='16' x2='19' y2='12' /><line x1='15' y1='8' x2='19' y2='12' /></svg>"
-            data-navcontainer=".control-partner">
-            <?php if(!empty($doitac)) {
-                foreach($doitac as $v){?>
-            <div class="doitac-item">
-                <a href="<?=$v['link']?>" class="doitac__img effect10">
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '100x70x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $setting['name'.$lang]]) ?>
-                </a>
-            </div>
-            <?php }}?>
-        </div>
-    </div>
-</div>
-<div class="tieuchi">
-    <div class="wrapper">
-        <div class="tieuchii">
-            <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:0" data-sm-items="1:0" data-md-items="2:0"
-                data-lg-items="3:0" data-xlg-items="3:0" data-rewind="1" data-autoplay="0" data-loop="0"
-                data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500"
-                data-dots="0" data-nav="0"
-                data-navtext="<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-left' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='5' y1='12' x2='9' y2='16' /><line x1='5' y1='12' x2='9' y2='8' /></svg>|<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-right' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='15' y1='16' x2='19' y2='12' /><line x1='15' y1='8' x2='19' y2='12' /></svg>"
-                data-navcontainer=".control-partner">
-                <?php if(!empty($tieuchi)) {
-                foreach($tieuchi as $v){?>
-                <div class="tieuchi__item">
-                    <div class="tieuchi__item--icon">
-                        <?= $func->getImage(['class' => 'lazy', 'sizes' => '55x51x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
-                    </div>
-                    <div class="tieuchi__content">
-                        <div class="tieuchi__name">
-                            <span>
-                                <?=$v['name'.$lang]?>
-                            </span>
-                        </div>
-                        <div class="tieuchi__desc">
-                            <span>
-                                <?=$v['desc'.$lang]?>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <?php }}?>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="about">
+    <div class="img-item-01 img-item">
+        <img src="assets/images/images/img-item-02.png" alt="<?=$setting['name'.$lang]?>">
+    </div>
+    <div class="img-item-02 img-item">
+        <img src="assets/images/images/img-item-01.png" alt="<?=$setting['name'.$lang]?>">
+    </div>
     <div class="wrapper">
         <?php if(!empty($about)){?>
         <div class="aboutt">
             <div class="about__left">
-                <div class="about__heading heading">
-                    <span><?=$about[0]['name'.$lang]?></span>
-                </div>
-                <div class="about__middle">
-                    <div>
-                        <img src="assets/images/images/item-about02.png" alt="<?=$setting['name'.$lang]?>">
-                    </div>
-                    <div class="about__content">
-                        <span>
-                            <?=$about[0]['desc'.$lang]?>
-                        </span>
-                        <div class="about__btn">
-                            <a href="gioi-thieu" title="Giới thiệu"
-                                class="button button--isi button--text-thick button--text-upper button--size-s"><span>Xem
-                                    tất cả</span><img src="assets/images/images/item-btn.png"
-                                    alt="<?=$setting['name'.$lang]?>"></a>
-                        </div>
-
-                    </div>
+                <div class="about__left--img">
+                    <?= $func->getImage(['class' => '', 'sizes' => '400x490x1', 'upload' => UPLOAD_NEWS_L, 'image' => $about[0]['photo'], 'alt' => $about[0]['name'.$lang]]) ?>
                 </div>
             </div>
             <div class="about__right">
-                <?php if(!empty($imgabout[0])){?>
-                <div class="about__right-img">
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '190x190x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $imgabout[0]['photo'], 'alt' => $about[0]['name'.$lang]]) ?>
+                <span class="about__title">
+                    Welcome
+                </span>
+                <div class="about__heading">
+                    <!-- <span><?=$about[0]['name'.$lang]?></span> -->
+                    <span class="about__name--top">
+                        <?php
+                            $name = $about[0]['name'.$lang];
+                            $nametop = substr($name ,0,-7);
+                            echo $nametop;
+                        ?>
+                    </span>
+                    <span class="about__name--bottom">
+                        <?php
+                            $name = $about[0]['name'.$lang];
+                            $namebottom = substr($name ,-7);
+                            echo $namebottom;
+                        ?>
+                    </span>
                 </div>
-                <?php } ?>
-                <?php if(!empty($imgabout[1])){?>
-                <div class="about__right-img">
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '240x220x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $imgabout[1]['photo'], 'alt' => $about[0]['name'.$lang]]) ?>
+                <div class="about__content">
+                    <span>
+                        <?=$about[0]['desc'.$lang]?>
+                    </span>
+                    <div class="about__btn">
+                        <a href="gioi-thieu" title="Giới thiệu" class="btn-xemthem"><span>Xem thêm</span><img
+                                src="assets/images/images/icon-btn.png" alt="<?=$setting['name'.$lang]?>"></a>
+                    </div>
                 </div>
-                <?php } ?>
-                <?php if(!empty($imgabout[2])){?>
-                <div class="about__right-img">
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '300x340x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $imgabout[2]['photo'], 'alt' => $about[0]['name'.$lang]]) ?>
-                </div>
-                <?php } ?>
             </div>
         </div>
         <?php }?>
     </div>
 </div>
-<div class="productbc pd mr-top">
+<div class="dichvu">
+    <div class="img-item-03">
+        <img src="assets/images/images/img-item077.png" alt="">
+    </div>
     <div class="wrapper">
-        <div class="heading__top">
-            <span class="heading heading--white">
-                Sản phẩm bán chạy
-            </span>
-            <div class="heading__slogan heading__slogan--white">
-                <div>
-                    <img src="assets/images/images/line-white.png" alt="<?=$setting['name'.$lang]?>">
+        <div class="dichvuu">
+            <div class="heading">
+                <div class="heading__name heading__name--white">
+                    <span class="heading--title">Dịch vụ spa</span>
                 </div>
-                <span>
+                <span class="heading__slogan heading__slogan--white">
                     <?=$slogan['name'.$lang]?>
                 </span>
-                <div>
-                    <img src="assets/images/images/line-white-right.png" alt="<?=$setting['name'.$lang]?>">
+            </div>
+            <?php if (!empty($dichvunb)) { ?>
+            <?php if (!empty($dichvulist)) { ?>
+            <div class="border-radius-linear">
+                <div class="title-product-list text-center">
+                    <?php foreach ($dichvulist as $key => $vl) : ?>
+                    <a class="text-decoration-none a-title-product"
+                        data-list="<?= $vl['id'] ?>"><?= $vl['name' . $lang] ?></a>
+                    <div class="a-title-product-line"></div>
+                    <?php endforeach ?>
                 </div>
             </div>
-        </div>
-        <div class="productbc__list">
-            <?php if (count($productbc)) { ?>
-            <div class="owl-page owl-carousel owl-theme" data-xsm-items="2:20" data-sm-items="2:20" data-md-items="3:20"
-                data-lg-items="4:20" data-xlg-items="4:20" data-rewind="1" data-autoplay="1" data-loop="1"
-                data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500"
-                data-dots="0" data-nav="1"
-                data-navtext="<img src='assets/images/page-prev.png'>|<img src='assets/images/page-next.png'>"
-                data-navcontainer=".control-congtrinh">
-                <?php foreach ($productbc as $v) { ?>
-                <div>
-                    <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>" class="productbc__item">
-                        <div class="productbc__img effect10 scale-img">
-                            <?= $func->getImage(['class' => 'w-100 lazy','isWatermark' => true, 'prefix' => 'product', 'sizes' => '380x380x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-                        </div>
-                        <div class="productbc__content">
-                            <div class="productbc__name">
-                                <span><?=$v['name'.$lang]?></span>
-                            </div>
-                            <div class="productbc__price">
-                                <span>
-                                    <?=($v['regular_price']) ? $func->formatMoney($v['regular_price']) : lienhe?>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <?php } ?>
+            <?php } ?>
+            <div class="dichvu__list">
+                <div class="paging-product-list"></div>
             </div>
-            <div class="control-congtrinh transition"></div>
             <?php } ?>
         </div>
     </div>
 </div>
-<div class="productnb pd">
+<div class="albumm">
+    <div class="img-item-album img-item">
+        <img src="assets/images/images/img-item-05.png" alt="">
+    </div>
     <div class="wrapper">
-        <div class="heading__top">
-            <span class="heading heading--black">
-                Sản phẩm nổi bật
-            </span>
-            <div class="heading__slogan heading__slogan--black">
-                <div>
-                    <img src="assets/images/images/line-blue.png" alt="<?=$setting['name'.$lang]?>">
+        <div class="albummm">
+            <div class="heading">
+                <div class="heading__name heading__name--black">
+                    <span class="heading--title2">Hình ảnh không gian</span>
                 </div>
-                <span>
+                <span class="heading__slogan heading__slogan--gradient">
                     <?=$slogan['name'.$lang]?>
                 </span>
-                <div>
-                    <img src="assets/images/images/line-blue-02.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
             </div>
-        </div>
-        <?php if (!empty($productlist)) { ?>
-        <div class="title-product-list text-center">
-            <?php foreach ($productlist as $key => $vl) : ?>
-            <a class="text-decoration-none a-title-product" data-list="<?= $vl['id'] ?>"><?= $vl['name' . $lang] ?></a>
-            <?php endforeach ?>
-        </div>
-        <?php } ?>
-        <div class="productnb__list">
-            <div class="paging-product-list"></div>
+            <div class="album__list">
+                <div class="album__column">
+                    <?php if(!empty($thuvienanh[0])){?>
+                    <div class="album__item">
+                        <a class="album-image scale-img" href="<?=$thuvienanh[0][$sluglang]?>"
+                            title="<?=$thuvienanh[0]['name'.$lang]?>">
+                            <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '380x440x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[0]['photo'], 'alt' => $thuvienanh[0]['name'.$lang]])?>
+                        </a>
+                    </div>
+                    <?php }?>
+                    <?php if(!empty($thuvienanh[1])){?>
+                    <div class="album__item">
+                        <a class="album-image scale-img" href="<?=$thuvienanh[1][$sluglang]?>"
+                            title="<?=$thuvienanh[1]['name'.$lang]?>">
+                            <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '380x285x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $thuvienanh[1]['photo'], 'alt' => $thuvienanh[1]['name'.$lang]])?>
+                        </a>
+                    </div>
+                    <?php }?>
+                </div>
+                <div class="album__column"></div>
+                <div class="album__column"></div>
+            </div>
+            <div class="albumd__list-mobile">
+
+            </div>
         </div>
     </div>
 </div>

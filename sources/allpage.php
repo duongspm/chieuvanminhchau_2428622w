@@ -3,7 +3,7 @@ if (!defined('SOURCES')) die("Error");
 
 /* Query allpage */
 // need
-$product = $cache->get("select id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);
+$dichvu = $cache->get("select id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('dich-vu'), 'result', 7200);
 
 $favicon = $cache->get("select photo from #_photo where type = ? and act = ? and find_in_set('hienthi',status) limit 0,1", array('favicon', 'photo_static'), 'fetch', 7200);
 
@@ -21,7 +21,7 @@ $logo = $cache->get("select id, photo, options from #_photo where type = ? and a
 
 $bannerheader = $cache->get("select photo from #_photo where type = ? and act = ? limit 0,1", array('banner-header', 'photo_static'), 'fetch', 7200);
 
-$productlist = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
+$dichvulist = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'), 'result', 7200);
 
 $tag = $cache->get("select name$lang, desc$lang, id from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tag'), 'result', 7200);
 

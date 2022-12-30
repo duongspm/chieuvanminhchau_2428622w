@@ -40,12 +40,11 @@ NN_FRAMEWORK.GoTop = function(){
     });
     $(window).scroll(function(){
         if($(this).scrollTop()){
-            $('.menu-list').addClass('sticky');
+            $('.menu').addClass('sticky');
         }else{
-            $('.menu-list').removeClass('sticky');
+            $('.menu').removeClass('sticky');
         }
     });
-
 };
 
 /* Paging dịch vụ ajax list*/

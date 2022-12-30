@@ -23,7 +23,7 @@
 			'host' => 'localhost',
 			'username' => 'root',
 			'password' => '',
-			'dbname' => '2022_12-chieuvanminhchau_2428622w',//Thay
+			'dbname' => '2022-12_chieuvanminhchau_2428622w',//Thay
 			'port' => 3306,
 			'prefix' => 'table_',
 			'charset' => 'utf8mb4'

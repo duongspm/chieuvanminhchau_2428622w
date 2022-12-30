@@ -5,7 +5,7 @@
                 data-options="zoomMode: off; hint: off; rightClick: true; selectorTrigger: hover; expandCaption: false; history: false;"
                 href="<?=ASSET.WATERMARK?>/product/540x540x1/<?=UPLOAD_PRODUCT_L.$rowDetail['photo']?>"
                 title="<?=$rowDetail['name'.$lang]?>">
-                <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $rowDetail['photo'], 'alt' => $rowDetail['name'.$lang]])?>
+                <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $rowDetail['photo'], 'alt' => $rowDetail['name'.$lang]])?>
             </a>
             <?php if($rowDetailPhoto) { if(count($rowDetailPhoto) > 0) { ?>
             <div class="gallery-thumb-pro">
@@ -17,7 +17,7 @@
                         <a class="thumb-pro-detail" data-zoom-id="Zoom-1"
                             href="<?=ASSET.WATERMARK?>/product/540x540x1/<?=UPLOAD_PRODUCT_L.$rowDetail['photo']?>"
                             title="<?=$rowDetail['name'.$lang]?>">
-                            <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $rowDetail['photo'], 'alt' => $rowDetail['name'.$lang]])?>
+                            <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $rowDetail['photo'], 'alt' => $rowDetail['name'.$lang]])?>
                         </a>
                     </div>
                     <?php foreach($rowDetailPhoto as $v) { ?>
@@ -25,7 +25,7 @@
                         <a class="thumb-pro-detail" data-zoom-id="Zoom-1"
                             href="<?=ASSET.WATERMARK?>/product/540x540x1/<?=UPLOAD_PRODUCT_L.$v['photo']?>"
                             title="<?=$rowDetail['name'.$lang]?>">
-                            <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $rowDetail['name'.$lang]])?>
+                            <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $rowDetail['name'.$lang]])?>
                         </a>
                     </div>
                     <?php } ?>
@@ -102,12 +102,11 @@
     <div class="product">
         <a class="box-product text-decoration-none" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
             <p class="pic-product scale-img">
-                <?=$func->getImage(['sizes' => '336x290x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+                <?=$func->getImage(['sizes' => '336x290x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
             </p>
             <h3 class="name-product text-split"><?=$v['name'.$lang]?></h3>
             <p class="price-product">
-                <span
-                    class="price-new"><?=lienhe?></span>
+                <span class="price-new"><?=lienhe?></span>
             </p>
         </a>
     </div>
