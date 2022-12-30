@@ -299,3 +299,4 @@
 ::1(admin)--query--tables(delete from table_user_online where time < 1672375831) (12:00:31 30/12/2022)
 ::1(admin)--query--tables(delete from table_user_online where time < 1672375849) (12:00:49 30/12/2022)
 ::1(admin)--query--tables(delete from table_user_online where time < 1672375851) (12:00:51 30/12/2022)
+::1()--query--tables(delete from table_user_online where time < 1672379754) (13:05:54 30/12/2022)
