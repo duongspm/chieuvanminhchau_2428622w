@@ -81,6 +81,34 @@ NN_FRAMEWORK.Slickvideo = function(){
         loop: true
     });
 };
+
+NN_FRAMEWORK.SlickFeedback = function(){
+    $('.slick--feedback').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        responsive: [
+            {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+            }
+        ]
+    });
+};
 /* Paging ajax list*/
 NN_FRAMEWORK.loadPagingList = function () {
     loadPaging("api/product.php?perpage=8", ".paging-product-list", 0);
@@ -849,6 +877,7 @@ $(document).ready(function(){
     NN_FRAMEWORK.OwlPage();
     NN_FRAMEWORK.Pagings();
     NN_FRAMEWORK.Slickvideo();
+    NN_FRAMEWORK.SlickFeedback();
     // NN_FRAMEWORK.Cart();
     NN_FRAMEWORK.Videos();
     NN_FRAMEWORK.Photobox();

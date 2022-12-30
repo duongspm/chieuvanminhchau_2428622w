@@ -2,26 +2,10 @@
     <div class="wrapper">
         <div class="footerr">
             <div class="footer-item">
-                <div class="footer-name">
-                    <span><?=$footer['name'.$lang]?></span>
-                </div>
-                <div class="footer-info"><?= htmlspecialchars_decode($footer['content' . $lang]) ?></div>
-            </div>
-            <div class="footer-item">
-                <div class="footer-title">
-                    <span>Chính sách</span>
-                    <div class="footer_line">
-                        <img src="assets/images/images/ft-line.png" alt="<?=$setting['name'.$lang]?>">
-                    </div>
-                </div>
-                <div class="footer__list">
-                    <?php if(!empty($policy)){?>
-                    <ul>
-                        <?php foreach($policy as $v){?>
-                        <li><a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a></li>
-                        <?php }?>
-                    </ul>
-                    <?php }?>
+                <div class="footer__logo">
+                    <a href="" title="<?=trangchu?>" class="peShinerr">
+                        <?=$func->getImage(['sizes' => '214x214x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $logo['photo'], 'alt' => $setting['name'.$lang]])?>
+                    </a>
                 </div>
                 <div class="footer-social">
                     <?php if(!empty($social)){foreach($social as $v){?>
@@ -33,9 +17,53 @@
                 </div>
             </div>
             <div class="footer-item">
+                <div class="footer-name">
+                    <span><?=$setting['name'.$lang]?></span>
+                </div>
+                <div class="footer__info">
+                    <div class="ft__info--item">
+                        <div>
+                            <img src="assets/images/images/icon-footer-01.png" alt="">
+                        </div>
+                        <span>
+                            Địa chỉ: <?=$optsetting['address']?>
+                        </span>
+                    </div>
+                    <div class="ft__info--item">
+                        <div>
+                            <img src="assets/images/images/icon-footer-02.png" alt="">
+                        </div>
+                        <span>
+                            Hotline: <a
+                                href="tel:<?=$func->formatPhone($optsetting['hotline'])?>"><?=$func->formatPhone($optsetting['hotline'])?></a>
+                        </span>
+                    </div>
+                    <div class="ft__info--item">
+                        <div>
+                            <img src="assets/images/images/icon-footer-03.png" alt="">
+                        </div>
+                        <span>
+                            Email: <?=$optsetting['email']?>
+                        </span>
+                    </div>
+                    <div class="ft__info--item">
+                        <div>
+                            <img src="assets/images/images/icon-footer-04.png" alt="">
+                        </div>
+                        <span>
+                            Website: <?=$optsetting['website']?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <sfpan class="footer--title">
+                    fanpage
+                </sfpan>
                 <div class="footer-fb">
                     <div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="500"
-                        data-height="230" data-small-header="true" data-adapt-container-width="true"
+                        data-height="220" data-small-header="true" data-adapt-container-width="true"
                         data-hide-cover="false" data-show-facepile="true">
                         <div class="fb-xfbml-parse-ignore">
                             <blockquote cite="<?=$optsetting['fanpage']?>">
@@ -46,17 +74,6 @@
                 </div>
             </div>
         </div>
-        <div class="footer__tag mr-bottom mr-top">
-            <span>tag từ khóa: </span>
-            <?php if(!empty($tag)){
-                foreach($tag as $v){?>
-
-            <a class="tag__item" href="<?=$v['desc'.$lang]?>" title="<?=$v['name'.$lang]?>">
-                <?=$v['name'.$lang]?>
-            </a>
-
-            <?php }}?>
-        </div>
     </div>
     <div class="copyright">
         <div class="wrapper copyrightt">
@@ -64,7 +81,7 @@
                 <span>Copyright © 2022
                     <span class="settingname">
                         <?=$setting['name'.$lang]?>
-                    </span>. Design by Nina Co.,Ltd
+                    </span>. Design <span class="settingname">By Nina</span>
                 </span>
             </div>
         </div>

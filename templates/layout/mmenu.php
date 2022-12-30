@@ -3,7 +3,7 @@
         <a id="hamburger" href="#menu" title="Menu"><span></span></a>
         <div class="logo-mmenu">
             <a href="" title="<?=trangchu?>" class="peShiner2">
-                <?=$func->getImage(['sizes' => '100x50x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $logo['photo'], 'alt' => $setting['name'.$lang]])?>
+                <?=$func->getImage(['sizes' => '50x50x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $logo['photo'], 'alt' => $setting['name'.$lang]])?>
             </a>
         </div>
 
@@ -28,11 +28,11 @@
                     title="<?=gioithieu?>"><?=gioithieu?></a></li>
 
             <li>
-                <a class="has-child <?php if($com=='san-pham') echo 'active'; ?> transition" href="san-pham"
-                    title="Sản phẩm">Sản phẩm</a>
-                <?php if(count($productlist)) { ?>
+                <a class="has-child <?php if($com=='dich-vu') echo 'active'; ?> transition" href="dich-vu"
+                    title="Dịch vụ">Dịch vụ</a>
+                <?php if(count($dichvulist)) { ?>
                 <ul>
-                    <?php foreach($productlist as $klist => $vlist) {
+                    <?php foreach($dichvulist as $klist => $vlist) {
                             $spcat = $d->rawQuery("select name$lang, slugvi, slugen, id from #_product_cat where id_list = ? and find_in_set('hienthi',status) order by numb,id desc",array($vlist['id'])); ?>
                     <li>
                         <a class="has-child transition" title="<?=$vlist['name'.$lang]?>"
@@ -43,7 +43,10 @@
                 </ul>
                 <?php } ?>
             </li>
-
+            <li>
+                <a class="<?php if($com=='thu-vien-anh') echo 'active'; ?> transition menu-line" href="thu-vien-anh"
+                    title="Hình ảnh">Hình ảnh</a>
+            </li>
 
             <li>
                 <a class="<?php if($com=='tin-tuc') echo 'active'; ?> transition menu-line" href="tin-tuc"

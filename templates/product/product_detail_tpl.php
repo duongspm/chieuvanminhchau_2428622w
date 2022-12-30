@@ -52,12 +52,9 @@
                     <div class="attr-content-pro-detail"><?=$rowDetail['view']?></div>
                 </li>
             </ul>
-            <div class="xemthem-btn lienhe-btn">
-                <a href="tel:<?=$func->formatPhone($optsetting['phone'])?>"
-                    title="<?=$func->formatPhone($optsetting['phone'])?>">Liên hệ ngay</a>
-            </div>
+
             <br>
-            <div class="desc-pro-detail">
+            <div class="d">
                 <?=(!empty($rowDetail['desc'.$lang])) ? nl2br(htmlspecialchars_decode($rowDetail['desc'.$lang])) : ''?>
             </div>
 
